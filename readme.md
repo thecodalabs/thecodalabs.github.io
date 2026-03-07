@@ -25,10 +25,3 @@ A lightweight digital presence for a Health & Environment NGO. Optimized to ensu
 
 ### 3. Smart Irrigation (Legacy Project)
 A hardware-software fusion project developed at age 17, featured on [CRED UK](https://cred.org.uk/2022/04/20/jj-and-rr-inventing-at-17/).
-
-## 🔧 Installation & Local Setup
-If you want to run this lab locally:
-
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/thecodalabs/thecodalabs.github.io.git](https://github.com/thecodalabs/thecodalabs.github.io.git)
