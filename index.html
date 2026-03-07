@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Julius — Developer</title>
+    <meta
+      name="description"
+      content="John Julius (@johnthecoda) - Building purposeful software in Tanzania."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                "-apple-system",
+                "BlinkMacSystemFont",
+                '"Segoe UI"',
+                "Roboto",
+                "Helvetica",
+                "Arial",
+                "sans-serif",
+              ],
+              mono: ['"JetBrains Mono"', "Menlo", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #fff;
+        color: #111;
+        line-height: 1.6;
+      }
+      .drawer-active {
+        transform: translateY(0%) !important;
+      }
+      .overlay-active {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+      /* Flavio-style link underlines */
+      .f-link {
+        border-bottom: 1px solid #ddd;
+        transition: border-color 0.2s;
+        cursor: pointer;
+      }
+      .f-link:hover {
+        border-bottom-color: #111;
+        color: #0052ff;
+      }
+    </style>
+  </head>
+  <body class="p-6 md:p-16 max-w-3xl mx-auto font-sans">
+    <header class="mb-16">
+      <h1 class="text-3xl font-bold tracking-tight mb-2">John Julius</h1>
+      <p class="text-gray-500 font-mono text-sm uppercase tracking-widest">
+        The Coda Labs
+      </p>
+    </header>
+
+    <section class="mb-16 text-lg">
+      <p class="mb-4">
+        I am a full-stack developer specializing in
+        <strong>Purposeful Software</strong>. I build high-performance tools
+        that solve real-world problems in education and rural accessibility.
+      </p>
+      <div class="flex gap-4 font-mono text-xs mt-4">
+        <a href="https://github.com/aeoncotz" class="f-link">GitHub</a>
+        <a href="https://instagram.com/johnthecoda" class="f-link">Instagram</a>
+        <a href="mailto:nextron.inc@gmail.com" class="f-link">Email</a>
+      </div>
+    </section>
+
+    <section class="mb-20">
+      <h2
+        class="text-xs font-mono font-bold uppercase text-gray-400 mb-8 tracking-[0.3em]"
+      >
+        Selected Projects
+      </h2>
+
+      <ul class="space-y-10">
+        <li class="group">
+          <span class="text-xs font-mono text-gray-400 block mb-1"
+            >01. IDENTITY</span
+          >
+          <h3
+            onclick="openDrawer('myrecords')"
+            class="text-xl font-bold f-link inline"
+          >
+            MyRecords (iThinker ID)
+          </h3>
+          <p class="mt-2 text-gray-600">
+            A centralized SSO system designed to digitize the academic lifecycle
+            across Ilemela Schools.
+          </p>
+        </li>
+
+        <li class="group">
+          <span class="text-xs font-mono text-gray-400 block mb-1"
+            >02. NGO SOLUTION</span
+          >
+          <h3
+            onclick="openDrawer('heso')"
+            class="text-xl font-bold f-link inline"
+          >
+            HESO Tanzania
+          </h3>
+          <p class="mt-2 text-gray-600">
+            Lightweight digital presence optimized for "Slow-Net" rural
+            accessibility.
+          </p>
+        </li>
+
+        <li class="group">
+          <span class="text-xs font-mono text-gray-400 block mb-1"
+            >03. PRESS FEATURE</span
+          >
+          <h3
+            onclick="openDrawer('irrigation')"
+            class="text-xl font-bold f-link inline underline decoration-blue-500"
+          >
+            Smart Irrigation at 17
+          </h3>
+          <p class="mt-2 text-gray-600">
+            Automated hardware-software fusion featured on CRED UK.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-20">
+      <h2
+        class="text-xs font-mono font-bold uppercase text-gray-400 mb-8 tracking-[0.3em]"
+      >
+        Technical Stack
+      </h2>
+      <p class="text-gray-700 leading-relaxed">
+        <strong>Frontend:</strong> React.js, Tailwind CSS, Semantic HTML5.<br />
+        <strong>Backend:</strong> Node.js, Python for automation.<br />
+        <strong>Focus:</strong> SSO Implementation (iThinker ID), Offline-first
+        tools (Helen).
+      </p>
+    </section>
+
+    <footer
+      class="mt-32 pt-8 border-t border-gray-100 text-xs font-mono text-gray-400"
+    >
+      &copy; 2026 CodaLabs. • Tanzania
+    </footer>
+
+    <div
+      id="overlay"
+      onclick="closeDrawer()"
+      class="fixed inset-0 bg-white/90 z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    ></div>
+
+    <div
+      id="drawer"
+      class="fixed bottom-0 left-0 right-0 bg-white z-[60] transform translate-y-full transition-transform duration-500 ease-out border-t-4 border-black shadow-2xl overflow-y-auto max-h-[85vh]"
+    >
+      <div class="max-w-xl mx-auto px-6 py-12">
+        <button
+          onclick="closeDrawer()"
+          class="font-mono text-[10px] uppercase font-bold mb-8 hover:underline tracking-widest"
+        >
+          [ Close ]
+        </button>
+        <div id="drawer-content"></div>
+      </div>
+    </div>
+
+    <script>
+      const projectData = {
+        myrecords: {
+          title: "MyRecords (iThinker ID)",
+          desc: "A centralized Single Sign-On (SSO) system designed to digitize the academic lifecycle. It allows parents and students to access multiple school services with one identity, featuring secure result dashboards and credential recovery.",
+          link: "https://coda.ilemelaschools.ac.tz/myrecords",
+        },
+        heso: {
+          title: "HESO Tanzania",
+          desc: "Developed a digital presence optimized for rural stakeholders. The architecture is lightweight to ensure reports are accessible even on 2G/3G mobile connections in remote areas.",
+          link: "https://aeoncotz.github.io/HESO",
+        },
+        irrigation: {
+          title: "Smart Irrigation & CRED",
+          desc: "An automated irrigation system co-created at age 17. Featured by CRED UK as a leading example of youth innovation in Tanzanian agriculture.",
+          link: "https://cred.org.uk/2022/04/20/jj-and-rr-inventing-at-17/",
+        },
+      };
+
+      function openDrawer(id) {
+        const data = projectData[id];
+        document.getElementById("drawer-content").innerHTML = `
+                <h2 class="text-3xl font-bold mb-6 tracking-tighter">${data.title}</h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">${data.desc}</p>
+                <a href="${data.link}" target="_blank" class="inline-block bg-black text-white font-mono text-xs px-6 py-3 hover:bg-blue-600 transition-colors">
+                    EXPLORE LIVE →
+                </a>
+            `;
+        document.getElementById("drawer").classList.add("drawer-active");
+        document.getElementById("overlay").classList.add("overlay-active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeDrawer() {
+        document.getElementById("drawer").classList.remove("drawer-active");
+        document.getElementById("overlay").classList.remove("overlay-active");
+        document.body.style.overflow = "auto";
+      }
+    </script>
+  </body>
+</html>
