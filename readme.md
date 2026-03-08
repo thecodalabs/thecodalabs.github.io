@@ -1,4 +1,4 @@
-# 🔬 The Coda Labs // John Julius
+# 🔬 John The Coda
 ### Purposeful Software Engineering & Digital Architecture
 [![Domain: thecodalabs.js.org](https://img.shields.io/badge/domain-thecodalabs.js.org-0052FF?style=flat-square)](https://thecodalabs.js.org)
 [![Status: Operational](https://img.shields.io/badge/status-operational-green?style=flat-square)](#)
