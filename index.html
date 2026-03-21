@@ -22,17 +22,42 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- favcon files -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo"><a href="https://johnthecoda.is-a.dev/">CodaLabs</a></div>
+      <div class="logo">
+        <a href="https://johnthecoda.is-a.dev/">CodaLabs</a>
+      </div>
       <ul>
         <li data-tooltip="Explore the ecosystem." class="hideonss">
           <a href="#">Start</a>
@@ -50,7 +75,7 @@
           <a href="#"> Bootcamps </a>
         </li>
         <li class="hideonbs" id="open-menu">
-          <a><i class="fa fa-list"></i></a>
+          <a><i class="fa fa-bars"></i></a>
         </li>
       </ul>
     </nav>
@@ -92,14 +117,18 @@
             <span>CodaLabs</span>' Projects
           </h1>
           <p>
-            I'm 21, Tanzanian architect dedicated to solving community-driven
-            challenges throughelegant design. I have spent over half a decade refining my craft, 
-            authoring 15+ technical handbooks, and leading specialized bootcamps to bridge
-            the gap between complex engineering and accessible education
+            I am a developer dedicated to building clean, functional tools.
+            Through minimalist design and vanilla code, I strive to create
+            accessible solutions that address practical, real-world challenges
+            within my community.
           </p>
           <div class="hello-button">
-            <a href="#" class="talk">Let's Talk</a>
-            <a href="#" class="expolore">Explore CodaLabs</a>
+            <a href="#" class="talk"
+              >Let's Talk <i class="fa-regular fa-comment"></i
+            ></a>
+            <a href="#" class="expolore"
+              >Explore <i class="fa fa-compass"></i
+            ></a>
           </div>
           <div class="quick-hello-button">
             <a href="https://instagram.com/johnthecoda" target="_blank"
@@ -121,6 +150,9 @@
         <div class="item">
           <h2>A M S Tanzania</h2>
           <p>Web-based student portal for secondary schools in Tanzania.</p>
+          <div class="floaticon">
+            <img src="assets/media/academic-management-system.png" alt="" />
+          </div>
           <div class="cta-buttons">
             <a href="projects/AMS/">Learn More</a>
             <a
@@ -136,6 +168,9 @@
             A centralized SSO system designed to digitize the academic lifecycle
             across Schools.
           </p>
+          <div class="floaticon">
+            <img src="assets/media/academic.png" alt="" />
+          </div>
           <div class="cta-buttons">
             <a href="#">Learn More</a>
             <a
@@ -148,9 +183,11 @@
         <div class="item">
           <h2>H E S O Tanzania</h2>
           <p>
-            Lightweight digital presence optimized for "Slow-Net" rural
-            accessibility.
+            Building resilient communities through strategic health education.
           </p>
+          <div class="floaticon">
+            <img src="assets/media/ngo.png" alt="" />
+          </div>
           <div class="cta-buttons">
             <a href="#">Learn More</a>
             <a href="https://aeoncotz.github.io/HESO/" target="_blank"
@@ -161,6 +198,9 @@
         <div class="item">
           <h2>Invention at 17</h2>
           <p>Automated hardware-software fusion featured on CRED UK.</p>
+          <div class="floaticon">
+            <img src="assets/media/at-17.png" alt="" />
+          </div>
           <div class="cta-buttons">
             <a href="#">Learn More</a>
             <a
@@ -176,6 +216,9 @@
             A custom-built educational platform for Ilemela English Medium
             School.
           </p>
+          <div class="floaticon">
+            <img src="assets/media/classroom.png" alt="" />
+          </div>
           <div class="cta-buttons">
             <a href="#">Learn More</a>
             <a href="https://ilemelaschools.ac.tz/" target="_blank"

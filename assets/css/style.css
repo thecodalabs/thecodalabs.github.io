@@ -1,7 +1,8 @@
 :root {
   --primary-text: #000;
   --body-bg: #f5f5f5;
-  --monofonts: monospace;
+  --monofonts: "Google Sans", sans-serif;
+  --veraround: "Varela Round", sans-serif;
   --muted-text: #7e7c7c;
   --active-link-text: #8d8de7;
   --dev-border: 1px #3333 solid;
@@ -36,6 +37,8 @@ body {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  background: url(../media/hero-bg.jpg) center/cover no-repeat;
+  background-attachment: fixed;
 }
 
 .navbar {
@@ -175,25 +178,31 @@ main {
 }
 
 .wrapper {
-  height: 90vh;
+  height: 120vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
   h1 {
-    font-size: 3rem;
-    max-width: 600px;
+    font-size: 3.8rem;
+    max-width: 800px;
+    letter-spacing: 1px;
     text-align: center;
+    font-family: var(--veraround);
+    color: #353535;
     span {
-      color: rgb(194, 166, 146);
+      color: var(--button-bg);
     }
   }
   p {
     max-width: 800px;
     text-align: center;
+    line-height: 1.5;
     padding: 12px 0;
-    font-size: 18px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #383838;
   }
 }
 
@@ -204,18 +213,20 @@ main {
   align-items: center;
   justify-content: space-between;
   margin: 30px 0;
+
   a {
-    padding: 5px 12px;
+    font-size: 20px;
+    padding: 8px 12px;
     border-radius: 30px;
-    border: var(--dev-border);
+    border: var(--primary-text) 1px solid;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    color: var(--muted-text);
+    transition: all 0.2s ease;
+    color: var(--primary-text);
   }
   a:hover {
-    box-shadow: var(--dev-box-shadow);
-    transform: translateX(3px);
-    color: var(--active-link-text);
+    border-color: var(--button-bg);
+    color: var(--pure-white);
+    background: var(--button-bg);
   }
 }
 
@@ -232,6 +243,7 @@ main {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-size: 24px;
   }
 
   a i {
@@ -270,6 +282,7 @@ main {
   h2 {
     font-size: 3rem;
     text-align: center;
+    font-family: var(--veraround);
   }
   p {
     max-width: 600px;
@@ -277,6 +290,18 @@ main {
     text-align: center;
     margin: 20px 0 20px 0;
     padding: 0 20px;
+    letter-spacing: 1px;
+  }
+}
+
+#products .item .floaticon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  height: 40%;
+  img {
+    height: 100%;
   }
 }
 
@@ -461,12 +486,13 @@ footer {
 
 @media (max-width: 835px) {
   .wrapper {
+    height: 110vh;
     h1 {
-      font-size: 2rem;
-      max-width: 400px;
+      font-size: 2.3rem;
+      max-width: 500px;
     }
     p {
-      font-size: 16px;
+      font-size: 19px;
     }
   }
 
@@ -486,10 +512,13 @@ footer {
     display: none;
   }
   #products .item {
-    height:48vh;
     h2 {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
     }
+  }
+  #products .item {
+    height: 70vh;
+
     p {
       font-size: 17px;
     }
