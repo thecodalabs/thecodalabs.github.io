@@ -277,7 +277,7 @@ main {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin: 15px 0;
+  margin: 15px 0 0 0;
   background: var(--coda-gray);
   h2 {
     font-size: 3rem;
@@ -444,6 +444,9 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-top: 1px solid var(--border-muted-color);
+  padding-top: 3rem;
+  background: var(--coda-gray);
   p {
     font-size: 14px;
     padding: 8px 0 0 0;
