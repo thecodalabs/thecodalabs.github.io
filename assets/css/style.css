@@ -42,11 +42,12 @@ body {
 }
 
 .navbar {
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 12px 10vw;
+  padding: 0 10vw;
   backdrop-filter: var(--coda-glass);
   position: fixed;
   background: rgba(255, 255, 255, 0.8);
@@ -141,12 +142,13 @@ body {
 }
 
 .navbar .logo {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto 0 0;
-  a {
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: -0.1rem;
+  img {
+    height: 40px;
   }
 }
 
@@ -500,7 +502,7 @@ footer {
   }
 
   .navbar {
-    padding: 12px 20px 12px 10vw;
+    padding: 8px 10px;
   }
 
   .navbar ul {
